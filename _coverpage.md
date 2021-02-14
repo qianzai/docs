@@ -1,4 +1,4 @@
-![logo](_media/icon.svg)
+![logo](https://cdn.jsdelivr.net/gh/qianzai/mydocs@master/custom/_media/icon.svg)
 
 ## Bzm 文档
 
