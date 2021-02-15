@@ -158,26 +158,26 @@ const app = new Vue({
 > - 每次父级组件发生变更时，子组件中所有的 `prop `都将会刷新为最新的值。
 > - 这意味着你不应该在一个子组件内部改变 `prop`。如果你这样做了，`Vue `会在浏览器的控制台中发出警告。
 
-## 组件中定义数据和事件
+## 4. 组件中定义数据和事件
 
-### 组件中定义属于组件的数据
+### 4.1. 组件中定义属于组件的数据
 
 ```js
 //组件声明的配置对象
-    const login = {
-        template:'<div><h1>{{ msg }} Vue学习中</h1><ul><li v-for="item,index in lists">{{ index }}{{ item }}</li></ul></div>',
-        data(){   //使用data函数方式定义组件的数据   在templatehtml代码中通过插值表达式直接获取
-            return {
-                msg:"hello",
-                lists:['java','spring','springboot']
-            }//组件自己内部数据
-        }
-    }
+const login = {
+  template:
+    '<div><h1>{{ msg }} Vue学习中</h1><ul><li v-for="item,index in lists">{{ index }}{{ item }}</li></ul></div>',
+  data() {
+    //使用data函数方式定义组件的数据   在templatehtml代码中通过插值表达式直接获取
+    return {
+      msg: "hello",
+      lists: ["java", "spring", "springboot"],
+    }; //组件自己内部数据
+  },
+};
 ```
 
-
-
-### 组件中事件定义
+### 4.2. 组件中事件定义
 
 ```js
   const login = {
@@ -201,13 +201,48 @@ const app = new Vue({
 > 1. 组件中定义事件和直接在`Vue`中定义事件基本一致 直接在组件内部对应的`html`代码上加入`@事件名=函数名`方式即可
 > 2. 在组件内部使用`methods`属性用来定义对应的事件函数即可,事件函数中`this`指向的是当前组件的实例
 
-### 向子组件中传递事件并在子组件中调用
+### 4.3. 向子组件中传递事件并在子组件中调用
 
+**在子组件中调用传递过来的相关事件必须使用 `this.$emit('函数名') `方式调用**
 
+```js
+//1.声明组件
+    const login = {
+        template:"<div><h1>Vue学习 {{ name }}</h1> <input type='button' value='点我' @click='change'></div>",
+        data(){
+            return {
+                uname:this.name
+            }
+        },
+        props:['name'],
+        methods:{
+            change(){
+                //调用vue实例中函数
+                this.$emit('aaa');  //调用组件传递过来的其他函数时需要使用 this.$emit('函数名调用')
+            }
+        }
+    }
 
+ //2.注册组件
+    	const app = new Vue({
+        el: "#app",
+        data: {
+            username:"小白"
+        },
+        methods: {
+            findAll(){  //一个事件函数  将这个函数传递给子组件
+                alert('Vue 实例中定义函数');
+            }
+        },
+        components:{
+            login,//组件的注册
+        }
+    });
 
+//3.使用组件
+	 <login :name="username" @aaa="findAll"></login>  //this.$emit('aaa'); 调用即可
+```
 
-
+![image-20210215124223015](<media/Vue中组件(Component).assets/image-20210215124223015.png>)
 
 ---
-
