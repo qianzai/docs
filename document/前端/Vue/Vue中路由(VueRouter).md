@@ -18,3 +18,4 @@
 <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>  //vue 路由js
 ```
 
+### 创建组件对象
