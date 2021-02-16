@@ -13,3 +13,8 @@
 ## 使用路由
 
 ### 引入路由
+
+```js
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>  //vue 路由js
+```
+
