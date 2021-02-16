@@ -13,6 +13,8 @@
     | 🚴‍♂️ 本站总访客数：<span id="busuanzi_value_site_uv"></span> 人
 </span>
 
+<span id="sitetime"></span>
+
 <br>
 
 [个人博客](https://bzm.ink/) [开始阅读](README.md)
