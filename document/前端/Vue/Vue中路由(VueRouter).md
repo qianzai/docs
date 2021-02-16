@@ -74,9 +74,9 @@ const app = new Vue({
 
 ![使用路由](<media/Vue中路由(VueRouter).assets/使用路由.gif>)
 
-##  router-link使用
+## 4. router-link 使用
 
-**作用**：用来替换我们在切换路由时使用a标签切换路由
+**作用**：用来替换我们在切换路由时使用 a 标签切换路由
 
 **好处**：就是可以自动给路由路径加入#不需要手动加入
 
@@ -87,8 +87,149 @@ const app = new Vue({
 
 > [!tip]
 >
-> 1. `router-link` 用来替换使用a标签实现路由切换 好处是不需要书写`#`号直接书写路由路径
-> 2. `router-link` **to属性**用来书写路由路径   **tag属性**:用来将`router-link`渲染成指定的标签
+> 1. `router-link` 用来替换使用 a 标签实现路由切换 好处是不需要书写`#`号直接书写路由路径
+> 2. `router-link` **to 属性**用来书写路由路径 **tag 属性**:用来将`router-link`渲染成指定的标签
 
-## 默认路由
+## 5. 默认路由
 
+**作用**：用来在第一次进入界面是显示一个默认的组件
+
+```js
+//创建路由对象
+const router = new VueRouter({
+  routes: [
+    // {path: "/", component: login},   不太推荐
+    { path: "/", redirect: "login" }, //推荐使用
+    { path: "/login", component: login },
+    { path: "/resgiter", component: register },
+  ],
+});
+```
+
+?>`redirect`:：用来当访问的是默认路由 "/" 时 跳转到指定的路由展示
+
+## 6. 路由中参数传递
+
+### 6.1. 传统方式
+
+#### 6.1.1. 通过?号形式拼接参数
+
+```js
+<router-link to="/login?id=21&name=zhangsan">登录</router-link>
+```
+
+#### 6.1.2. 组件中获取参数
+
+```js
+const login = {
+  template: "<h1>用户登录</h1>",
+  data() {
+    return {};
+  },
+  methods: {},
+  created() {
+    console.log(
+      "=============>" +
+        this.$route.query.id +
+        "======>" +
+        this.$route.query.name
+    );
+  },
+};
+```
+
+> **传统方式**都是放在`query`里面的
+
+### 6.2. restful 方式
+
+#### 6.2.1. 通过使用路径方式传递参数
+
+```js
+<router-link to="/register/24/张三">我要注册</router-link>;
+var router = new VueRouter({
+  routes: [
+    { path: "/register/:id/:name", component: register }, //定义路径中获取对应参数
+  ],
+});
+```
+
+#### 6.2.2. 组件中获取参数
+
+```js
+const register = {
+  template: "<h1>用户注册{{ $route.params.name }}</h1>",
+  created() {
+    console.log(
+      "注册组件中id:   " + this.$route.params.id + this.$route.params.name
+    );
+  },
+};
+```
+
+> **restful 方式**都是放在`params`里面的
+
+## 7. 嵌套路由
+
+### 7.1. 声明最外层和内层路由
+
+```js
+<template id="product">
+  <div>
+    <h1>商品管理</h1>
+
+    <router-link to="/product/add">商品添加</router-link>
+    <router-link to="/product/edit">商品编辑</router-link>
+
+    <router-view></router-view>
+  </div>
+</template>;
+
+//声明组件模板
+const product = {
+  template: "#product",
+};
+
+const add = {
+  template: "<h4>商品添加</h4>",
+};
+
+const edit = {
+  template: "<h4>商品编辑</h4>",
+};
+```
+
+### 7.2. 创建路由对象含有嵌套路由
+
+```js
+const router = new VueRouter({
+  routes: [
+    {
+      path: "/product",
+      component: product,
+      children: [
+        { path: "/add", component: add },
+        { path: "/edit", component: edit },
+      ],
+    },
+  ],
+});
+```
+
+### 7.3. 注册路由对象
+
+```js
+const app = new Vue({
+  el: "#app",
+  data: {},
+  methods: {},
+  components: {},
+  router,
+});
+```
+
+### 7.4. 测试路由
+
+```js
+      <router-link to="/product">商品管理</router-link>
+      <router-view></router-view>
+```
