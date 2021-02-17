@@ -13,4 +13,5 @@
 
 <!-- <span id="sitetime"></span> -->
 
-[个人博客](https://bzm.ink/) [开始阅读](README.md)
+[个人博客](https://www.bzm.ink/) [开始阅读](README.md)
+
