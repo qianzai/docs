@@ -4,8 +4,6 @@
 
 > 一个学习记录文档
 
-<br>
-
 <span id="busuanzi_container_site_pv" style='display:none'>
     👀 本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
 </span>
@@ -14,7 +12,5 @@
 </span>
 
 <span id="sitetime"></span>
-
-<br>
 
 [个人博客](https://bzm.ink/) [开始阅读](README.md)
