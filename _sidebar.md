@@ -30,6 +30,7 @@
   - [Axios入门](/document/前端/Axios入门)
   - [NodeJS安装](/document/前端/NodeJS安装)
 - [🔗网络](/document/网络/)
+  - [Telnet远程登录](/document/网络/Telnet远程登录)
 - [🧰GitHub](/document/GitHub/)
   - [Gitmoji](/document/GitHub/Gitmoji.md)
 - [⚒️实用技巧](/document/实用技巧/)

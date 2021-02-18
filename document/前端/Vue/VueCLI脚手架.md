@@ -46,7 +46,7 @@ npm uninstall -g vue-cli  //卸载2.x版本脚手架
 
 [使用 CLI 搭建 Vue.js 项目](https://blog.csdn.net/Neuf_Soleil/article/details/88926242)
 
-#### 创建项目
+#### 4.3.1. 创建项目
 
 ```bash
 vue init webpack hello
@@ -56,19 +56,7 @@ vue init webpack hello
 
 ![image-20210217121828322](media/VueCLI脚手架.assets/image-20210217121828322.png)
 
-#### 启动项目
-
-```bash
-cd hello
-```
-
-```bash
-npm run dev
-```
-
-![image-20210217141745419](media/VueCLI脚手架.assets/image-20210217141745419.png)
-
-#### 项目结构
+#### 4.3.2. 项目结构
 
 ```markdown
 hello ------------->项目名
@@ -108,9 +96,22 @@ hello ------------->项目名
 
 ![image-20210217152547356](media/VueCLI脚手架.assets/image-20210217152547356.png)
 
-#### 访问项目
+#### 4.3.3. 启动项目
+
+```bash
+cd hello
+```
+
+```bash
+npm run dev
+```
+
+![image-20210217141745419](media/VueCLI脚手架.assets/image-20210217141745419.png)
+
+#### 4.3.4. 访问项目
 
 http://localhost:8080
 
-> 默认8080端口
+> 默认 8080 端口
 
+![image-20210217194548415](media/VueCLI脚手架.assets/image-20210217194548415.png)
