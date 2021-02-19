@@ -15,10 +15,10 @@
 ## 🎄 访问入口：
 
 - 个人站点：http://docs.bzm.ink/#/
-- GitHub：https://qianzai.github.io/mydocs/#/
-- Gitee：https://buzm.gitee.io/mydocs/#/
+- GitHub Pages：https://qianzai.github.io/mydocs/#/
+- Gitee Pages：https://buzm.gitee.io/mydocs/#/
 
 ## 💬关于评论
 
-使用的**Gitalk评论系统**，是通过`GitHub`的`Issues`，故切换文章时加载不流畅，比较影响体验，
+使用的**Gitalk评论系统**，是通过`GitHub`的`Issues`，故切换文章时加载不流畅，比较影响体验，评论可以在[GitHub Pages](https://qianzai.github.io/mydocs/#/)站点评论
 
