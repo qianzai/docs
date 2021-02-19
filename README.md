@@ -18,7 +18,6 @@
 - GitHub：https://qianzai.github.io/mydocs/#/
 - Gitee：https://buzm.gitee.io/mydocs/#/
 
-同时[GitHub pages](https://qianzai.github.io/mydocs/#/) 与 、[Gitee pages](https://buzm.gitee.io/mydocs/#/) 都可以访问
 ## 💬关于评论
 
 使用的**Gitalk评论系统**，是通过`GitHub`的`Issues`，故切换文章时加载不流畅，比较影响体验，
