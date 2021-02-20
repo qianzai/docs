@@ -114,4 +114,50 @@ http://localhost:8080
 
 > 默认 8080 端口
 
-![image-20210217194548415](media/VueCLI脚手架.assets/image-20210217194548415.png)
+## 5. Vue CLI 分析
+
+1、`src`是我们主要书写`Vue`源码的目录，来看下初始化后的结构
+
+```markdown
+src
+├── App.vue //项目中根组件
+├── assets //存放静态资源
+│ └── logo.png
+├── components //存放 Vue 组件
+│ └── HelloWorld.vue
+├── main.js //项目中主入口
+└── router //用来配置项目中路由
+└── index.js
+```
+
+2、`npm run dev`运行项目后，就一个**HelloWorld 页面**
+
+![image-20210220143541754](media/VueCLI脚手架.assets/image-20210220143541754.png)
+
+3、首先来看项目的主入口 `main.js`
+
+![image-20210220151744473](media/VueCLI脚手架.assets/image-20210220151744473.png)
+
+> [!tip]
+>
+> 一般不怎么去修改它
+
+`vue`的实例对象`app`，在根路径的`index.html`中使用的
+
+![image-20210220152149661](media/VueCLI脚手架.assets/image-20210220152149661.png)
+
+?>`index.html`也不用去修改，是项目完成后，构建打包用的
+
+4、`Vue`全局实例对象，就注册了一个**App 根组件**，项目一运行的时候，就加载了**App 根组件**
+
+![image-20210220153826093](media/VueCLI脚手架.assets/image-20210220153826093.png)
+
+- `<router-view/>`就根据路径信息，展示对应的组件
+
+- `export default {}`暴露当前组件对象，同时该对象也就有自己的`data`，`methods`，`components`
+
+5、`router/index.js`文件就定义了对应的路由规则展示对应的组件
+
+![image-20210220154135731](media/VueCLI脚手架.assets/image-20210220154135731.png)
+
+---
