@@ -22,6 +22,7 @@
   - [正向代理与反向代理](/document/运维/正向代理与反向代理)
   - [Linux 发送邮件 mail](/document/运维/运维发送邮件mail)
   - [企业监控Zabbix4.0搭建](/document/运维/企业监控Zabbix4.0搭建)
+  - [何为DevOps](/document/运维/何为DevOps)
 - [🌻 前端](/document/前端/)
   - [Vue](/document/前端/Vue/)
     - [Vue 入门](/document/前端/Vue/Vue入门)
