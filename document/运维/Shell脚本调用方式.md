@@ -1,6 +1,6 @@
 # Shell 脚本调用方式
 
-> 在`Linux `运维开发中，无论是在`console`(控制台)，还是`shell`脚本中，使用的方法经常有这三种：**./my.sh** 或 **source my.sh** 或 **. my.sh**
+> 在`Linux `运维开发中，无论是在`console`(控制台)，还是`shell`脚本中，使用的方法经常有这三种：`./my.sh `或 `source my.sh` 或 **. my.sh**
 
 **主要以下有几种方式：**
 
