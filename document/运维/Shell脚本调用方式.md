@@ -10,7 +10,7 @@
 | **exec**   | 在同一个 Shell 内执行，但是父脚本中 `exec` 行之后的内容就不会再执行了 |
 | **source** | 在同一个 Shell 中执行，在被调用的脚本中声明的变量和环境变量, 都可以在主脚本中进行获取和使用，相当于合并两个脚本在执行。 |
 
-![1.sh to 2.sh](media/Shell脚本调用方式.assets/1.sh to 2.sh.png)
+![1.shTo2.sh](media/Shell脚本调用方式.assets/1.sh to 2.sh.png)
 
 ## 测试脚本
 
