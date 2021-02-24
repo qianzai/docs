@@ -160,4 +160,33 @@ src
 
 ![image-20210220154135731](media/VueCLI脚手架.assets/image-20210220154135731.png)
 
+## Vue CLI 使用axios
+
+### 安装axios
+
+```bash
+npm install axios --save-dev
+```
+
+### 配置main.js中引入axios
+
+```js
+import axios from 'axios';
+
+Vue.prototype.$http=axios;
+```
+
+### 使用axios
+
+在需要发送异步请求的位置
+
+```js
+this.$http.get("url").then((res)=>{})  
+
+this.$http.post("url").then((res)=>{})
+```
+
+
+
 ---
+

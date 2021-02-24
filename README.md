@@ -4,7 +4,9 @@
 
 <img src="https://img.shields.io/github/stars/qianzai/mydocs" data-origin="https://img.shields.io/github/stars/qianzai/mydocs" alt=""> <img src="https://img.shields.io/github/forks/qianzai/mydocs" data-origin="https://img.shields.io/github/forks/qianzai/mydocs" alt="">
 
-以下来源自己总结、网上收集、视频笔记，**禁止商用**
+
+
+以下来源自己总结、网上收集、视频笔记，**转载或商用需要保留[©️作者信息](https://github.com/qianzai/docs/blob/main/LICENSE)**
 
 > 如果有侵权之处，可以联系我进行删除
 
