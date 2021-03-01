@@ -338,7 +338,7 @@ vim /etc/docker/daemon.json
 systemctl restart docker
 ```
 
-安装：Harbor 
+**安装：Harbor** 
 
 官方地址：https://github.com/vmware/harbor/releases 
 
@@ -346,7 +346,7 @@ systemctl restart docker
 
 > `harbor-offline-installer-v1.2.0.tgz`：公众号：<u>云计算小千</u>  回复：*k8s安装*
 
-解压Harbor
+**解压Harbor**
 
 ```shell
 tar -zxvf harbor-offline-installer-v1.2.0.tgz -C /usr/local/
@@ -359,7 +359,7 @@ hostname = hub.bzm.com
 ui_url_protocol = https
 ```
 
-创建证书目录
+**创建证书目录**
 
 ```shell
 mkdir -p /data/cert/
@@ -367,7 +367,7 @@ mkdir -p /data/cert/
 
 ![image-20201010095729190](media/Kubernetes集群安装.assets/image-20201010095729190.png)
 
-创建https 证书以及配置相关目录权限
+**创建https 证书以及配置相关目录权限**
 
 ```shell
 [root@hub cert]# openssl genrsa -des3 -out server.key 2048 
@@ -419,7 +419,7 @@ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 chmod a+x *
 ```
 
-安装
+**安装**
 
 ```shell
 cd /usr/local/harbor/

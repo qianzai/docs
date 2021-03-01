@@ -4,9 +4,7 @@
 
 <img src="https://img.shields.io/github/stars/qianzai/mydocs" data-origin="https://img.shields.io/github/stars/qianzai/mydocs" alt=""> <img src="https://img.shields.io/github/forks/qianzai/mydocs" data-origin="https://img.shields.io/github/forks/qianzai/mydocs" alt="">
 
-
-
-以下来源自己总结、网上收集、视频笔记，**转载或商用需要保留[©️作者信息](https://github.com/qianzai/docs/blob/main/LICENSE)**
+以下来源自己总结、网上收集、视频笔记，**转载或商用需要保留[©️原文地址与作者信息](https://github.com/qianzai/docs/blob/main/LICENSE)**
 
 > 如果有侵权之处，可以联系我进行删除
 
@@ -23,4 +21,12 @@
 ## 💬关于评论
 
 使用的**Gitalk评论系统**，是通过`GitHub`的`Issues`，故切换文章时加载不流畅，比较影响体验，评论可以在[GitHub Pages](https://qianzai.github.io/mydocs/#/)站点评论
+
+**登录403报错**：访问：https://cors-anywhere.herokuapp.com/corsdemo
+
+> 点击如下，增加对demo服务器的访问权限
+
+![image-20210225174237393](media/README.assets/image-20210225174237393.png)
+
+---
 

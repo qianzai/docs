@@ -35,6 +35,73 @@ Vue.use(ElementUI);
 
 ## Element UI 小案例
 
+### 案例效果
+
+**主页一个轮播图**
+
+![image-20210225093028931](media/Eelement_UI.assets/image-20210225093028931.png)
+
+**用户管理增删改查**
+
+![image-20210225155552577](media/Eelement_UI.assets/image-20210225155552577.png)
+
+
+
+## 案例步骤
+
+创建`Vue cli`，安装Axios，下载引入`element-ui`
+
+![image-20210225094328999](media/Eelement_UI.assets/image-20210225094328999.png)
+
+**导航栏**
+
+```vue
+<template>
+  <div id="app">
+    <el-header>
+      <!--导航菜单-->
+      <el-menu :default-active="activeIndex"
+               class="el-menu-demo"
+               mode="horizontal"
+               @select="handleSelect">
+        <el-menu-item index="/index">Bzm主页</el-menu-item>
+        <el-menu-item index="/users">用户管理</el-menu-item>
+        <el-menu-item index="/msgs">消息中心</el-menu-item>
+        <el-menu-item index="/orders">订单管理</el-menu-item>
+      </el-menu>
+    </el-header>
+    <el-main>
+      <router-link to="/index"></router-link>
+    </el-main>
+    <router-view />
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  data () {
+    return {
+      activeIndex: this.$route.path,  //激活索引为路由路径
+    };
+  },
+  methods: {
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath);
+      this.$router.push(key)    //切换路由
+    }
+  }
+}
+</script>
+
+<style>
+</style>
+```
+
+
+
+
+
 
 
 创建数据库表`t_users.sql`
@@ -109,8 +176,6 @@ public class UserController {
 
 }
 ```
-
-
 
 http://localhost:8989/user/findAll
 
