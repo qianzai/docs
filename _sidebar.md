@@ -18,6 +18,7 @@
     -  [Kubernetes资源控制器](/document/云原生/Kubernetes/Kubernetes资源控制器)
     -  [Kubernetes服务发现](/document/云原生/Kubernetes/Kubernetes服务发现)
     -  [Kubernetes存储](/document/云原生/Kubernetes/Kubernetes存储)
+    -  [Kubernetes集群安全](/document/云原生/Kubernetes/Kubernetes集群安全)
 - [🐧 运维](/document/运维/)
   - [逻辑卷](/document/运维/逻辑卷)
   - [Nginx](/document/运维/Nginx/)
