@@ -16,11 +16,11 @@
 
 > `ConfigMap`的作用与他类似
 
- ![ConfigMap 作用图](media/Kubernetes存储.assets/ConfigMap 作用图.png)
+ ![ConfigMap作用图](media/Kubernetes存储.assets/ConfigMap作用图.png)
 
 ### 1.3. ConfigMap 创建
 
-#### 1.3.1. 1、使用目录创建
+#### 1.3.1. 使用目录创建
 
 `game.properties`
 
@@ -59,14 +59,14 @@ game-config   2      8s
 [root@k8s-master01 configmap]# kubectl describe cm game-config 
 ```
 
-#### 1.3.2. 2、使用文件创建
+#### 1.3.2. 使用文件创建
 
 ```shell
  可以指定目录，也可以单独指定文件
 [root@k8s-master01 configmap]#  kubectl create configmap game-config-2 --from-file=/data/configmap/game.properties
 ```
 
-#### 1.3.3. 3、使用宁面值创建
+#### 1.3.3. 使用宁面值创建
 
 ```shell
 $ kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm
@@ -76,7 +76,7 @@ $ kubectl create configmap special-config --from-literal=special.how=very --from
 
 ### 1.4. Pod 中使用 ConfigMap
 
-#### 1.4.1. 1、使用 ConfigMap 来替代环境变量
+#### 1.4.1. 使用 ConfigMap 来替代环境变量
 
 `cm.yaml `
 
@@ -175,7 +175,7 @@ MYAPP_SVC_PORT=tcp://10.98.57.156:80
 
 > 通过 ConfigMap 将环境变量 注入到 Pod内部
 
-#### 1.4.2. 2、用ConfigMap设置命令行参数
+#### 1.4.2. 用ConfigMap设置命令行参数
 
 `cm.yaml`
 
@@ -216,7 +216,7 @@ spec:
 
 > 也就是通过环境变量的方式注入值
 
-#### 1.4.3. 3、通过数据卷插件使用ConfigMap
+#### 1.4.3. 通过数据卷插件使用ConfigMap
 
 ```yaml
 apiVersion: v1
@@ -857,7 +857,7 @@ spec:
 >
 > 最新版本中的`Recycle`已被废弃，点击 [官网查看](https://kubernetes.io/zh/docs/concepts/storage/persistent-volumes/)
 >
-> ![Recycle 废弃说明图](media/Kubernetes存储.assets/Recycle 废弃说明图.png)
+> ![Recycle废弃说明图](media/Kubernetes存储.assets/Recycle废弃说明图.png)
 
 #### 4.3.3. 状态
 
