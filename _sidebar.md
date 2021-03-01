@@ -1,5 +1,6 @@
 - [🎨 引言](/README.md)
 - [☕️Java](/document/Java/)
+  - [Mybatis](/document/Java/Mybatis)
   - [SpringBoot](/document/Java/SpringBoot)
   - [SpringCloud](/document/Java/SpringCloud笔记)
   - [Maven](/document/Java/Maven)
