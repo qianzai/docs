@@ -2,15 +2,15 @@
 
 !> [源码地址](https://gitee.com/BuZM/RabbitMQ)：https://gitee.com/BuZM/RabbitMQ
 
-## 1、RabbitMQ简介
+## 1. RabbitMQ简介
 
-### 1.1、什么MQ
+### 1.1. 什么是MQ
 
 `MQ `(Message Quene);翻译为`消息队列`,通过典型的`生产者`和`消费者`模型,生产者不断向消息队列中生产消息，消费者不断的从队列中获取消息。因为消息的生产和消费都是异步的，而且只关心消息的发送和接收，没有业务逻辑的侵入，轻松的实现系统间解耦。别名为`消息中间件`通过利用高效 可靠的消息传递机制进行平台无关的数据交流，井基于数据通信来进行分布式系统的集成。
 
 > 当今市面上有很多主流的消息中间件，如老牌的`ActiveMQ`、`RabbitMQ`, 炙手可热的`Kafka`,阿里巴巴自主开发`RocketHQ`等.
 
-### 1.2、不同MQ特点
+### 1.2. 不同MQ特点
 
 ```markdown
 # 1.ActiveMQ
@@ -34,7 +34,7 @@
 
 > `RabbitMQ`比`Kafka`可靠，`Kafka`更适合`IO高吞吐`的处理，一般应用在大数据日志处理或对实时性（少量延迟），可靠性（少量丢数据）要求稍低的场景使用，比如ELK日志收集。
 
-### 1.3、RabbitMQ简介
+### 1.3. RabbitMQ简介
 
 > 基于`AMQP`协议，erlang语言开发，是部署最广泛的开源消息中间件,是最受欢迎的开源消息中间件之一。
 
@@ -44,7 +44,7 @@
 
 `官方教程`: https://www.rabbitmq.com/#getstarted
 
-### 1.4、AMQP 协议
+### 1.4. AMQP 协议
 
 ```markdown
  # AMQP 协议
@@ -53,13 +53,13 @@
 
 ![](media/RabbitMQ.assets/image-20200311182438041.png)
 
-## 2、RabbitMQ 的安装
+## 2. RabbitMQ 的安装
 
 `官网下载地址`: https://www.rabbitmq.com/download.html
 
 ![](media/RabbitMQ.assets/image-20190925220115235.png)
 
-### 2.1、Linux 安装
+### 2.1. Linux 安装
 
 `Erlang依赖包`:https://bintray.com/rabbitmq-erlang/rpm/erlang
 
@@ -142,7 +142,7 @@
 	password:  guest
 ```
 
-### 2.2、docker 安装
+### 2.2. docker 安装
 
 ```shell
 $ docker pull rabbitmq:3.7.7-management
@@ -158,11 +158,11 @@ RABBITMQ_DEFAULT_PASS：默认用户名的密码
 # 浏览器打开web管理端：http://Server-IP:15672
 ```
 
-## 3、web管理界面介绍
+## 3. web管理界面介绍
 
 
 
-## 4、RabbitMQ支持的消息模型
+## 4. RabbitMQ支持的消息模型
 
 ![image-20200531110650141](media/RabbitMQ.assets/image-20200531110650141.png)
 
@@ -170,9 +170,9 @@ RABBITMQ_DEFAULT_PASS：默认用户名的密码
 
 ![image-20200531110740433](media/RabbitMQ.assets/image-20200531110740433.png)
 
-## 5、RabbitMQ入门
+## 5. RabbitMQ入门
 
-### 5.1、引入依赖
+### 5.1. 引入依赖
 
 ```xml
 <dependency>
@@ -182,7 +182,7 @@ RABBITMQ_DEFAULT_PASS：默认用户名的密码
 </dependency>
 ```
 
-### 5.2、第一种模型(直连)
+### 5.2. 第一种模型(直连)
 
 ![](media/RabbitMQ.assets/image-20191126165840602.png)
 
@@ -259,7 +259,7 @@ RABBITMQ_DEFAULT_PASS：默认用户名的密码
   });
 ```
 
-### 5.3、第二种模型(work quene)
+### 5.3. 第二种模型(work quene)
 
 `Work queues`，也被称为（`Task queues`），任务模型。当消息处理比较耗时的时候，可能生产消息的速度会远远大于消息的消费速度。长此以往，消息就会堆积越来越多，无法及时处理。此时就可以使用work 模型：**让多个消费者绑定到一个队列，共同消费队列中的消息**。队列中的消息一旦消费，就会消失，因此任务是不会被重复执行的。
 
@@ -317,13 +317,13 @@ channel.basicConsume("hello",true,new DefaultConsumer(channel){
 
 > `总结:默认情况下，RabbitMQ将按顺序将每个消息发送给下一个使用者。平均而言，每个消费者都会收到相同数量的消息。这种分发消息的方式称为循环。`
 
-### 5.4、消息自动确认机制
+### 5.4. 消息自动确认机制
 
 > Doing a task can take a few seconds. You may wonder what happens if one of the consumers starts a long task and dies with it only partly done. With our current code, once RabbitMQ delivers a message to the consumer it immediately marks it for deletion. In this case, if you kill a worker we will lose the message it was just processing. We'll also lose all the messages that were dispatched to this particular worker but were not yet handled.
 >
 > But we don't want to lose any tasks. If a worker dies, we'd like the task to be delivered to another worker.
 
-### 5.5、第三种模型(fanout)
+### 5.5. 第三种模型(fanout)
 
 `fanout 扇出 也称为广播`
 
@@ -340,7 +340,7 @@ channel.basicConsume("hello",true,new DefaultConsumer(channel){
 
 
 
-### 5.6、Routing 之订阅模型-Direct(直连)
+### 5.6. Routing 之订阅模型-Direct(直连)
 
 `在Fanout模式中，一条消息，会被所有订阅的队列都消费。但是，在某些场景下，我们希望不同的消息被不同的队列消费。这时就要用到Direct类型的Exchange。`
 
@@ -424,7 +424,7 @@ channel.basicConsume(queue,true,new DefaultConsumer(channel){
 
 ----
 
-### 5.7、Routing 之订阅模型-Topic
+### 5.7. Routing 之订阅模型-Topic
 
 `Topic`类型的`Exchange`与`Direct`相比，都是可以根据`RoutingKey`把消息路由到不同的队列。只不过`Topic`类型`Exchange`可以让队列在绑定`Routing key` 的时候使用通配符！这种模型`Routingkey` 一般都是由一个或多个单词组成，多个单词之间以”.”分割，例如： `item.insert`
 
@@ -497,9 +497,9 @@ channel.basicConsume(queue,true,new DefaultConsumer(channel){
 
  ![image-20200316114000459](media/RabbitMQ.assets/image-20200316114000459.png)
 
-## 6、SpringBoot中使用RabbitMQ
+## 6. SpringBoot中使用RabbitMQ
 
-### 	1. 引入依赖
+### 6.1. 引入依赖
 
 ```xml
 <dependency>
@@ -508,7 +508,7 @@ channel.basicConsume(queue,true,new DefaultConsumer(channel){
 </dependency>
 ```
 
-### 	2. 配置配置文件
+### 6.2. 配置配置文件
 
 ```yml
 spring:
@@ -524,7 +524,7 @@ spring:
 
 `RabbitTemplate`  用来简化操作     使用时候直接在项目中注入即可使用
 
-### hello world模型
+### 6.3. hello world模型
 
 **开发生产者**
 
@@ -552,7 +552,7 @@ public class HelloCustomer {
 }
 ```
 
-### work模型
+### 6.4. work模型
 
 1. **开发生产者**
 
@@ -587,7 +587,7 @@ public class HelloCustomer {
 
    > `说明:默认在Spring AMQP实现中Work这种方式就是公平调度,如果需要实现能者多劳需要额外配置`
 
-### Fanout 广播模型
+### 6.5. Fanout 广播模型
 
 1. **开发生产者**
 
@@ -625,7 +625,7 @@ public class HelloCustomer {
    }
    ```
 
-### Route 路由模型
+### 6.6. Route 路由模型
 
 1. **开发生产者**
 
@@ -668,7 +668,7 @@ public class HelloCustomer {
    
    ```
 
-### Topic 订阅模型(动态路由模型)
+### 6.7. Topic 订阅模型(动态路由模型)
 
 1. **开发生产者**
 
@@ -716,9 +716,9 @@ public class HelloCustomer {
 
    ----
 
-## 7、MQ的应用场景
+## 7. MQ的应用场景
 
-### 7.1 异步处理
+### 7.1. 异步处理
 
 `场景说明：用户注册后，需要发注册邮件和注册短信,传统的做法有两种 1.串行的方式 2.并行的方式`
 
@@ -738,7 +738,7 @@ public class HelloCustomer {
 
 
 
-### 7.2 应用解耦
+### 7.2. 应用解耦
 
 `场景：双11是购物狂节,用户下单后,订单系统需要通知库存系统,传统的做法就是订单系统调用库存系统的接口. `
 
@@ -756,7 +756,7 @@ public class HelloCustomer {
 
     
 
-### 7.3 流量削峰
+### 7.3. 流量削峰
 
  `场景:` 秒杀活动，一般会因为流量过大，导致应用挂掉,为了解决这个问题，一般在应用前端加入消息队列。  
 
@@ -774,9 +774,9 @@ public class HelloCustomer {
 
 -----
 
-## 8、RabbitMQ的集群
+## 8. RabbitMQ的集群
 
-### 8.1、普通集群(副本集群)
+### 8.1. 普通集群(副本集群)
 
 > All data/state required for the operation of a RabbitMQ broker is replicated across all nodes. An exception to this are message queues, which by default reside on one node, though they are visible and reachable from all nodes. To replicate queues across nodes in a cluster   --摘自官网
 
@@ -863,7 +863,7 @@ public class HelloCustomer {
 
    ---
 
-### 8.2、镜像集群
+### 8.2. 镜像集群
 
 > This guide covers mirroring (queue contents replication) of classic queues  --摘自官网
 >
@@ -910,10 +910,6 @@ public class HelloCustomer {
    	rabbitmqctl clear_policy ha-all
    
    ```
-# 4.测试集群
-   ```
-
-   
 
 
-   ```
+

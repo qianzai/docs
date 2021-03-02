@@ -2,9 +2,9 @@
 
 !> [源码地址](https://gitee.com/BuZM/Redis)：https://gitee.com/BuZM/Redis
 
-## 1、 Nosql
+## 1. Nosql
 
-### 1.1、为什么要使用Nosql
+### 1.1. 为什么要使用Nosql
 
 >   在 90 年代，一个网站的访问量一般都不大，用单个数据库完全可以轻松应付。
 
@@ -18,19 +18,19 @@
 
 [什么是NoSQL，为什么要使用NoSQL？](https://blog.csdn.net/a909301740/article/details/80149552)
 
-### 1.2、什么是NoSQL？
+### 1.2. 什么是NoSQL？
 
 `NoSQL`(NoSQL = Not Only SQL )，意即“不仅仅是`SQL`”，
 
 >   泛指非关系型的数据库。随着互联网`web2.0`网站的兴起，传统的关系数据库在应付`web2.0`网站，特别是超大规模和高并发的`SNS`类型的`web2.0`纯动态网站已经显得力不从心，暴露了很多难以克服的问题，而非关系型的数据库则由于其本身的特点得到了非常迅速的发展。`NoSQL`数据库的产生就是为了解决大规模数据集合多重数据种类带来的挑战，尤其是大数据应用难题，包括超大规模数据的存储。
 
-### 1.3、NoSQL的特点
+### 1.3. NoSQL的特点
 
 -   方便扩展(数据之间没有关系,很好扩展! )
 -   大数据量高性能( `Redis` 一秒写8万次,读取11万, NoSQL的缓存记录级,是一种细粒度的缓存,性能会比较高! )
 -   数据类型是多样型的! (不需要事先设计数据库!随取随用!如果是数据量十分大的表,很多人就无法设计了!
 
-### 1.4、关系型数据库与NoSQL的区别？
+### 1.4. 关系型数据库与NoSQL的区别？
 
 `RDBMS`
 
@@ -53,9 +53,9 @@
 -   CAP定理
 -   高性能，高可用性和可伸缩性
 
-## 2、NoSQL的四大分类
+## 2. NoSQL的四大分类
 
-### 2.1、四类简介
+### 2.1. 四类简介
 
 **K-V键值对**
 
@@ -91,11 +91,11 @@ Neo4J, InfoGrid
 
 ![image-20200511142909459](media/Redis.assets/image-20200511142909459.png)
 
-### 2.2、四者对比
+### 2.2. 四者对比
 
 ![image-20200511143325029](media/Redis.assets/image-20200511143325029.png)
 
-## 3、Redis入门
+## 3. Redis入门
 
 `Redis`（==Re==mote ==Di==ctionary ==S==erver )，即远程字典服务!
 
@@ -103,14 +103,14 @@ Neo4J, InfoGrid
 
  `redis`会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了`master-slave`(主从)同步。
 
-### 3.1、Redis的特性
+### 3.1. Redis的特性
 
 -   性能极高，`Redis`能支持超过100K+每秒的读写频率；
 -   丰富的数据类型，`Redis`支持二进制案例的`Strings`，`Lists`，`Hashes`，`Sets`及`Ordered Sets`数据类型操作；
 -   原子，`Redis`的所有操作都是原子性的，同时`Redis`还支持对几个操作全并后的原子性执行；
 -   丰富的特性 – `Redis`还支持` publish/subscribe`, 通知, `key `过期等等特性。
 
-### 3.2、Linux上安装部署
+### 3.2. Linux上安装部署
 
 **1、官网下载redis**
 
@@ -192,7 +192,7 @@ OK
 
 ![image-20200511203729450](media/Redis.assets/image-20200511203729450.png)
 
-### 3.3、测试性能
+### 3.3. 测试性能
 
 `redis-benchmark`是-一个压力测试工具！————**官方自带**
 
@@ -222,13 +222,13 @@ OK
 redis-benchmark -h localhost -p 6379 -c 100 -n 100000
 ```
 
-## 4、基本知识
+## 4. 基本知识
 
 ![image-20200512074958040](media/Redis.assets/image-20200512074958040.png)
 
 >   默认是16个数据库
 
-### 4.1、常用命令
+### 4.1. 常用命令
 
 [Redis 命令参考](http://redisdoc.com/index.html)
 
@@ -299,13 +299,13 @@ string
 
 
 
-### 4.2、Redis为什么这么快
+### 4.2. Redis为什么这么快
 
 `Redis`是基于内存操作, `CPU`不是`Redis`性能瓶颈, `Redis`的瓶颈是根据机器的内存和网络带宽。
 
 [Redis的性能瓶颈](https://blog.csdn.net/AAA821/article/details/82930679)
 
-## 5、五大数据类型
+## 5. 五大数据类型
 
 ![image-20200512081634606](media/Redis.assets/image-20200512081634606.png)
 
@@ -314,7 +314,7 @@ bitmaps，hyperloglogs和地理空间( geospatial )索引半径查询。Redis �
 scripting)，LRU驱动事件( LRU eviction) , 务( transactions )和不同级别的磁盘持久化( persistence )， 并通过Redis哨
 兵( Sentinel )和自动分区( Cluster )提供高可用性( high availability)。
 
-### 5.1、String
+### 5.1. String
 
 ```bash
 127.0.0.1:6379> set k1 v1
@@ -453,7 +453,7 @@ OK
 
 ```
 
-### 5.2、List
+### 5.2. List
 
 基本的数据类型,列表。
 
@@ -606,7 +606,7 @@ OK
 >   -   列表中的元素是有序的，可以通过索引下标来获取某个元素或者某个范围内的元素列表
 >   -   列表中的元素是可以重复的
 
-### 5.3、Set
+### 5.3. Set
 
 
 
@@ -684,19 +684,19 @@ OK
 
 ```
 
-### 5.4、Hash
+### 5.4. Hash
 
-### 5.5、Zset
+### 5.5. Zset
 
-## 6、三种特殊数据类型
+## 6. 三种特殊数据类型
 
-### 6.1、geospatial地理位置
+### 6.1. geospatial地理位置
 
-### 6.2、Hyperloglog
+### 6.2. Hyperloglog
 
-### 6.3、Bitmaps
+### 6.3. Bitmaps
 
-## 7、事务
+## 7. 事务
 
 ==Redis单条命令式保存原子性的,但是事务不保证原子性!==
 
@@ -706,7 +706,7 @@ OK
 -   收到 `EXEC `命令后进入事务执行，事务中任意命令执行失败，其余的命令依然被执行。
 -   在事务执行过程，其他客户端提交的命令请求不会插入到事务执行命令序列中。
 
-### 7.1、基本操作
+### 7.1. 基本操作
 
 **一个事务从开始到执行会经历以下三个阶段**：
 
@@ -801,7 +801,7 @@ QUEUED
 
 ```
 
-### 7.2、监控
+### 7.2. 监控
 
 **悲观锁**
 
@@ -877,11 +877,11 @@ QUEUED
 
 ```
 
-## 8、Jedis
+## 8. Jedis
 
 >   `Java`操作`redis`,是官方推荐的java连接开发工具
 
-### 8.1、Jedis连接测试
+### 8.1. Jedis连接测试
 
 1、导入依赖
 
@@ -923,11 +923,11 @@ public class TestPing {
 
 >   PONG
 
-### 8.2、常用API
+### 8.2. 常用API
 
 [Jedis常用API整理](https://blog.csdn.net/fanbaodan/article/details/89047909)
 
-### 8.3、Jedis事务
+### 8.3. Jedis事务
 
 [jedis事务写法](https://my.oschina.net/wwwd/blog/829428)
 
@@ -960,9 +960,9 @@ public class TestPing {
 		}
 ```
 
-## 9、SpringBoot整合
+## 9. SpringBoot整合
 
-### 9.1、整合测试
+### 9.1. 整合测试
 
 说明:在`SpringBoot2.x`之后,原来使用的`jedis`被替换为了`lettuce`?
 
@@ -1023,7 +1023,7 @@ public class User implements Serializable {
 
 >   User(name=Bzm, age=18)
 
-### 9.2、序列化
+### 9.2. 序列化
 
 ```java
 	@Bean
@@ -1062,29 +1062,29 @@ public class User implements Serializable {
 
 ![image-20200513194841853](media/Redis.assets/image-20200513194841853.png)
 
-### 9.3、编写工具类
+### 9.3. 编写工具类
 
 >   企业中一般都有自己封装好的工具类
 
 [Redis工具类](https://www.cnblogs.com/zeng1994/p/03303c805731afc9aa9c60dbbd32a323.html)
 
-## 10、Redis配置文件详解
+## 10. Redis配置文件详解
 
 启动的时候,就通过配置文件来启动!
 
-### 单位
+### 10.1. 单位
 
 ![image-20200514092622468](media/Redis.assets/image-20200514092622468.png)
 
 >   unit单位大小不敏感
 
-### 包含
+### 10.2. 包含
 
 ![image-20200514093017622](media/Redis.assets/image-20200514093017622.png)
 
 >    引入其他的配置文件
 
-### 网络
+### 10.3. 网络
 
 ![image-20200514093332260](media/Redis.assets/image-20200514093332260.png)
 
@@ -1096,7 +1096,7 @@ protected-mode yes		#保护模式
 port 6379		#端口
 ```
 
-### 通用
+### 10.4. 通用
 
 ![image-20200514094723204](media/Redis.assets/image-20200514094723204.png)
 
@@ -1121,7 +1121,7 @@ databases 16		#数据库的数量,默认16
 always-show-logo yes		#是否总是显示logo
 ```
 
-### 快照
+### 10.5. 快照
 
 ![image-20200514104153032](media/Redis.assets/image-20200514104153032.png)
 
@@ -1152,11 +1152,11 @@ dir ./			#rdb文件保存的目录
 
 ```
 
-### 主从复制
+### 10.6. 主从复制
 
 ![image-20200514111709838](media/Redis.assets/image-20200514111709838.png)
 
-### 安全
+### 10.7. 安全
 
 ![image-20200514111856195](media/Redis.assets/image-20200514111856195.png)
 
@@ -1184,7 +1184,7 @@ OK
 
 ```
 
-###  客户端
+### 10.8. 客户端
 
 ![image-20200514121017446](media/Redis.assets/image-20200514121017446.png)
 
@@ -1193,7 +1193,7 @@ maxclients 10000		#设置能连接上redis的最大客户端的数量
 
 ```
 
-### 内存管理
+### 10.9. 内存管理
 
 ![image-20200514121326804](media/Redis.assets/image-20200514121326804.png)
 
@@ -1212,7 +1212,7 @@ maxmemory-policy noeviction			#内存到达上限之后的处理策略
 5.  volatile-ttl ： 删除即将过期的  
 6.  noeviction ： 永不过期，返回错误  
 
-### AOF 模式
+### 10.10. AOF 模式
 
 ![image-20200514121937493](media/Redis.assets/image-20200514121937493.png)
 
@@ -1232,7 +1232,7 @@ appendfsync everysec		#每秒都同步一次
 
 
 
-## 11、Redis的持久化
+## 11. Redis的持久化
 
 `Redis`是内存数据库,如果不将内存中的数据库状态保存到磁盘,那么一旦 服务器进程退出,服务器中的数据库状态也会消失。所以`Redis`提供了持久化功能!
 
@@ -1240,7 +1240,7 @@ appendfsync everysec		#每秒都同步一次
 
 [Redis的持久化机制](https://juejin.im/post/5d09a9ff51882577eb133aa9)
 
-### 11.1、RDB
+### 11.1. RDB
 
 >   `RDB`是一种快照存储持久化方式，具体就是将`Redis`某一时刻的内存数据保存到硬盘的文件当中，默认保存的文件名为`dump.rdb`，而在`Redis`服务器启动时，会重新加载`dump.rdb`文件的数据到内存当中恢复数据。
 
@@ -1281,7 +1281,7 @@ appendfsync everysec		#每秒都同步一次
 
 
 
-### 11.2 、AOF
+### 11.2. AOF
 
 >   AOF（Append Only File）,`AOF`持久化方式会记录客户端对服务器的每一次写操作命令，并将这些写操作以`Redis`协议追加保存到以后缀为`aof`文件末尾，在Redis服务器重启时，会加载并运行`aof`文件的命令，以达到恢复数据的目的。
 
@@ -1319,13 +1319,13 @@ dir ~/redis/
 -   `AOF`方式生成的日志文件太大，即使通过`AOF`重写，文件体积仍然很大。
 -   恢复数据的速度比`RDB`慢。
 
-### 11.3、选择RDB还是AOF呢？
+### 11.3. 选择RDB还是AOF呢？
 
 ![image-20200514181335161](media/Redis.assets/image-20200514181335161.png)
 
 >   当`RDB`与`AOF`两种方式都开启时，`Redis`会优先使用`AOF`日志来恢复数据，因为`AOF`保存的文件比`RDB`文件更完整。
 
-## 12、Redis发布订阅
+## 12. Redis发布订阅
 
 [订阅与发布](https://redisbook.readthedocs.io/en/latest/feature/pubsub.html)
 
@@ -1386,13 +1386,13 @@ Reading messages... (press Ctrl-C to quit)
 
 
 
-## 13、Redis主从复制
+## 13. Redis主从复制
 
 [主从复制](https://www.cnblogs.com/kismetv/p/9236731.html)
 
 >   主从复制,读写分离! 80% 的情况下都是在进行读操作!减缓服务器的压力! 架构中经常使用! |
 
-### 13.1、概念
+### 13.1. 概念
 
 主从复制，是指将一台`Redis`服务器的数据，复制到其他的Redis服务器。前者称为主节点(`master`)，后者称为从节点(`slave`)；数据的复制是单向的，只能由主节点到从节点。
 
@@ -1400,7 +1400,7 @@ Reading messages... (press Ctrl-C to quit)
 - 默认情况下,每台Redis服务器都是主节点;且-个主节点可以有多个从节点(或没有从节点) ,但一个从节点只能有一个主节点。
 ```
 
-### 13.2、主从复制的作用
+### 13.2. 主从复制的作用
 
 1.  数据冗余：主从复制实现了数据的热备份，是持久化之外的一种数据冗余方式。
 2.  故障恢复：当主节点出现问题时，可以由从节点提供服务，实现快速的故障恢复；实际上是一种服务的冗余。
@@ -1411,7 +1411,7 @@ Reading messages... (press Ctrl-C to quit)
 
 ![image-20200515081634651](media/Redis.assets/image-20200515081634651.png)
 
-### 13.3、主从复制的操作
+### 13.3. 主从复制的操作
 
 **配置**——只配置从库,不用配置主库!
 
@@ -1503,9 +1503,9 @@ OK
 -   增量复制: Master继续将新的所有收集到的修改命令依次传给slave ,完成同步
 -   但是只要是重新连接master , 一次完全同步(全量复制)将被自动执行!我们的数据-定可以在从机中看到! |
 
-##  14、哨兵模式
+## 14. 哨兵模式
 
-### 14.1、概述
+### 14.1. 概述
 
 **主从切换技术的方法是：当主服务器宕机后，需要手动把一台从服务器切换为主服务器，这就需要人工干预，费事费力，还会造成一段时间内服务不可用。**这不是一种推荐的方式，更多时候，我们优先考虑**哨兵模式**。
 
@@ -1534,7 +1534,7 @@ OK
 - 切换成功后，就会通过发布订阅模式，让各个哨兵把自己监控的从服务器实现切换主机，这个过程称为客观下线。这样对于客户端而言，一切都是透明的。
 ```
 
-### 14.2、搭建配置
+### 14.2. 搭建配置
 
 在`Redis`安装目录下有一个`sentinel.conf`文件，copy一份进行修改
 
@@ -1564,7 +1564,7 @@ sentinel auth-pass mymaster 123456
 
 
 
-### 14.3、Redis Sentinel的配置文件
+### 14.3. Redis Sentinel的配置文件
 
 ```bash
 # 哨兵sentinel实例运行的端口，默认26379  
@@ -1614,7 +1614,7 @@ sentinel client-reconfig-script mymaster /var/redis/reconfig.sh
 
 ```
 
-### 14.4、优缺点
+### 14.4. 优缺点
 
 **优点**:
 1、哨兵集群,基于主从复制模式,所有的主从配置优点,它全有
@@ -1624,5 +1624,5 @@ sentinel client-reconfig-script mymaster /var/redis/reconfig.sh
 1、Redis不好啊在线扩容的,集群容量一旦到达上限,在线扩容就+分麻烦!
 2、实现哨兵模式的配置其实是很麻烦的,里面有很多选择!
 
-## 15、Redis缓存穿透和雪崩
+## 15. Redis缓存穿透和雪崩
 

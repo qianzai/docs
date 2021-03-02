@@ -14,7 +14,7 @@
 
 ## 🎄 访问入口：
 
-- 个人站点：http://docs.bzm.ink/#/
+- 个人站点：https://docs.bzm.ink/#/
 - GitHub Pages：https://qianzai.github.io/mydocs/#/
 - Gitee Pages：https://buzm.gitee.io/mydocs/#/
 
