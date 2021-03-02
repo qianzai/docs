@@ -26,7 +26,7 @@
     -  [Kubernetes集群安全](/document/云原生/Kubernetes/Kubernetes集群安全)
 - [🐧 运维](/document/运维/)
   - [逻辑卷](/document/运维/逻辑卷)
-  - [Httpd](/document/运维/httpd)
+  - [Httpd](/document/运维/Httpd)
   - [Nginx](/document/运维/Nginx/)
     - [Nginx 入门](/document/运维/Nginx/Nginx入门)
     - [Nginx 信号集](/document/运维/Nginx/Nginx信号集)
