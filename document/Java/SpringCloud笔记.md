@@ -2081,7 +2081,7 @@ http://localhost/consumer/payment/get/8访问查看控制台日志信息。
 >
 >   **当检测到该节点微服务调用响应正常后，恢复调用链路。**
 >
->   ![img](https://martinfowler.com/bliki/images/circuitBreaker/state.png)
+>   ![img](media/SpringCloud笔记.assets/state.png)
 
 -   熔断器是一种开关，用来控制流量是否执行业务逻辑
 -   熔断器核心指标
@@ -2714,7 +2714,7 @@ http://localhost:8001/payment/circuit/-1
 
 工作流程图
 
-![preview](https://segmentfault.com/img/bV0mfx?w=1372&h=667/view)
+![preview](media/SpringCloud笔记.assets/3698765333-5a334916742e3_articlex.png)
 
 #### 5.1.9、Hystrix图形化Dashboard搭建
 
@@ -2955,7 +2955,7 @@ http://localhost:9527/payment/lb
 
 ![image-20200830153225217](media/SpringCloud笔记.assets/image-20200830153225217.png)
 
-![img](https://user-gold-cdn.xitu.io/2018/12/5/1677ca514d6ba46b?imageslim)
+![img](media/SpringCloud笔记.assets/1677ca514d6ba46b)
 
 断言`predicates`配置
 

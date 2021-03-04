@@ -36,7 +36,7 @@
 - MySQL 是最流行的[关系型数据库管理系统](https://baike.baidu.com/item/关系型数据库管理系统/696511)之一，在 WEB 应用方面，MySQL 是最好的 [RDBMS](https://baike.baidu.com/item/RDBMS/1048260) (Relational Database Management System，关系数据库管理系统) 应用软件之一。
 - MySQL 是一种关系型数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。
 
-![v2-22f78ac55ee443ca0cbcaf15d3e12cfc_1200x500](../../../../../../../../Documents/NetSarang/Xftp/Temporary/media/Mysql.assets/v2-22f78ac55ee443ca0cbcaf15d3e12cfc_1200x500.jpg)
+![image-20210304141337763](media/Mysql.assets/image-20210304141337763.png)
 
 ### 2.1. Mysql 特点
 
@@ -518,7 +518,7 @@ INNER JOIN DeptTB AS d ON e.dept_id=d.dept_id;
 
 _上面两句查询的效果是一样的_
 
-![image-20200609094624365](../../../../../../../../Documents/NetSarang/Xftp/Temporary/media/Mysql.assets/image-20200609094624365.png)
+![image-20210304141536288](media/Mysql.assets/image-20210304141536288.png)
 
 #### 7.8.2. 外联结查询：
 
