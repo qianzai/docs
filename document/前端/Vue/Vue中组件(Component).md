@@ -22,7 +22,7 @@
     </div>
 ```
 
-![image-20210214124628573](<media/Vue中组件(Component).assets/image-20210214124628573.png>)
+![image-20210214124628573](media/Vue中组件(Component).assets/image-20210214124628573.png)
 
 > [!tip]
 >
@@ -113,7 +113,7 @@ const app = new Vue({
 <login user-name="千仔" age="23"></login>;
 ```
 
-![image-20210214124912822](<media/Vue中组件(Component).assets/image-20210214124912822.png>)
+![image-20210214124912822](media/Vue中组件(Component).assets/image-20210214124912822.png)
 
 > [!tip]
 >
@@ -146,7 +146,7 @@ const app = new Vue({
 	 <login :name="username" :age="age"></login>  //使用v-bind形式将数据绑定Vue实例中data属性,日后data属性发生变化,组件内部数据跟着变化
 ```
 
-![image-20210214124338626](<media/Vue中组件(Component).assets/image-20210214124338626.png>)
+![image-20210214124338626](media/Vue中组件(Component).assets/image-20210214124338626.png)
 
 ### 3.3. prop 的单向数据流
 
@@ -243,6 +243,6 @@ const login = {
 	 <login :name="username" @aaa="findAll"></login>  //this.$emit('aaa'); 调用即可
 ```
 
-![image-20210215124223015](<media/Vue中组件(Component).assets/image-20210215124223015.png>)
+![image-20210215124223015](media/Vue中组件(Component).assets/image-20210215124223015.png)
 
 ---

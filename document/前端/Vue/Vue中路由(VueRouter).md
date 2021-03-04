@@ -72,7 +72,7 @@ const app = new Vue({
 
 ?>`#/login`在切换路由路径时候，前面需要添加`#`
 
-![使用路由](<media/Vue中路由(VueRouter).assets/使用路由.gif>)
+![使用路由](media/Vue中路由(VueRouter).assets/使用路由.gif)
 
 ## 4. router-link 使用
 
