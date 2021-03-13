@@ -32,7 +32,7 @@
 
 ```bash
 npm install -g vue-cli	//安装2.x版本脚手架
-npm install -g @vue-cli	//安装3.x版本脚手架
+npm install -g @vue/cli	//安装3.x版本脚手架
 ```
 
 ```bash
