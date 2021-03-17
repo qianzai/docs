@@ -72,7 +72,7 @@ export default new Vuex.Store({
 <h1>{{$store.state.count}}</h1>
 ```
 
-![state使用](media/Vuex.assets/state使用.gif)
+![state使用](media/Vuex.assets/State使用.gif)
 
 ### 3.2. Mutation
 
@@ -109,7 +109,7 @@ export default {
 </script>
 ```
 
-![Mutation使用](media/Vuex.assets/Mutation使用.gif)
+![Mutation使用](media/Vuex.assets/mutation使用.gif)
 
 ### 3.3. Getters
 
