@@ -195,7 +195,7 @@ DaemonSet 的一些典型用法：
 
 ## 4. Kubernetes集群安装
 
-#### 4.1. 集群规划
+### 4.1. 集群规划
 
 | 节点         | 处理器 | 内存 |
 | ------------ | ------ | ---- |
@@ -205,9 +205,9 @@ DaemonSet 的一些典型用法：
 
 ![k8s-集群规划](media/README.assets/k8s-集群规划.png)
 
-#### 4.2. 搭建过程
+### 4.2. 搭建过程
 
-##### 4.2.1. Kuberbetes 环境准备
+#### 4.2.1. Kuberbetes 环境准备
 
 >   `k8s-master01`，`k8s-node01`，`k8s-node02`所有节点安装
 
@@ -332,7 +332,7 @@ EOF
 systemctl restart systemd-journald
 ```
 
-##### 4.2.2. Kuberbetes 部署安装
+#### 4.2.2. Kuberbetes 部署安装
 
 1、kube-proxy开启ipvs的前置条件
 
@@ -507,7 +507,7 @@ k8s-node2      Ready    <none>   3m22s   v1.15.1
 
 
 
-#### 4.3. 配置私有仓库
+### 4.3. 配置私有仓库
 
 > 构建`Harbor`节点，作为私有仓库，并且已经安装了docker ，安装方式与之前一样。
 
