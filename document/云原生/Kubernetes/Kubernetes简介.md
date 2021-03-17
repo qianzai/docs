@@ -26,3 +26,4 @@
 > Kubernetes 也需要与网络、存储、安全、监控等其它服务集成才能提供综合性的容器基础设施。
 
 ![容器基础设施图](media/Kubernetes简介.assets/容器基础设施图.png)
+
