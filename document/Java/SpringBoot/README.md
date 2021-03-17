@@ -272,7 +272,7 @@ server:
 ```
 
 > [!TIP]能配置哪些内容呢？
-可以查看官方文档：[Common Application properties](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties)
+> 可以查看官方文档：[Common Application properties](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties)
 
 ### 3.2. YAML语法：
 
@@ -454,7 +454,7 @@ public class MyConfig {
 ?>被`@Configuration`标注的类就是一个配置类，配置类也是一个组件
 
 - `Full`(proxyBeanMethods = true)：**保证每个@Bean方法被调用多少次返回的组件都是单实例的**
--  `Lite`(proxyBeanMethods = false)：**每个@Bean方法被调用多少次返回的组件都是新创建的**
+- `Lite`(proxyBeanMethods = false)：**每个@Bean方法被调用多少次返回的组件都是新创建的**
 
 > [!TIP]
 >
@@ -1479,20 +1479,20 @@ public class MyMvcConfig implements WebMvcConfigurer {
 >   @Configuration(proxyBeanMethods = false)
 >   public static class EnableWebMvcConfiguration extends DelegatingWebMvcConfiguration implements ResourceLoaderAware {
 >   
->      //DelegatingWebMvcConfiguration父类
->      
->      private final WebMvcConfigurerComposite configurers = new WebMvcConfigurerComposite();
+>     //DelegatingWebMvcConfiguration父类
+>     
+>     private final WebMvcConfigurerComposite configurers = new WebMvcConfigurerComposite();
 >   
->      //从容器中获取所有的WebMvcConfigurer
+>     //从容器中获取所有的WebMvcConfigurer
 >   	@Autowired(required = false)
 >   	public void setConfigurers(List<WebMvcConfigurer> configurers) {
 >   		if (!CollectionUtils.isEmpty(configurers)) {
 >   			this.configurers.addWebMvcConfigurers(configurers);
 >   		}
 >   	}
->      
->      //一个参考实现；addViewControllers
->      @Override
+>     
+>     //一个参考实现；addViewControllers
+>     @Override
 >   	public void addViewControllers(ViewControllerRegistry registry) {
 >   		for (WebMvcConfigurer delegate : this.delegates) {
 >   			delegate.addViewControllers(registry);

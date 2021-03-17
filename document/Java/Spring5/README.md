@@ -16,7 +16,7 @@
 
 ### 1.1. 核心七大模块
 
-![image-20200501174802056](media/Spring5.assets/image-20200501174802056.png)
+![image-20200501174802056](media/README.assets/image-20200501174802056.png)
 
 组成 `Spring `框架的每个模块（或组件）都可以单独存在，或者与其他一个或多个模块联合实现。每个模块的功能如下：
 
@@ -82,11 +82,11 @@ void contextLoads() {
 }
 ```
 
-![image-20200501182401511](media/Spring5.assets/image-20200501182401511.png)
+![image-20200501182401511](media/README.assets/image-20200501182401511.png)
 
  然后这个时候需要用到Mysql，Oracle等去实现呢
 
-![image-20200501182705196](media/Spring5.assets/image-20200501182705196.png)
+![image-20200501182705196](media/README.assets/image-20200501182705196.png)
 
 ```java
 public class UserServiceImpl implements UserService {
@@ -207,19 +207,19 @@ public void test(){
 
 4、debug可以发现
 
-![image-20200501194752473](media/Spring5.assets/image-20200501194752473.png)
+![image-20200501194752473](media/README.assets/image-20200501194752473.png)
 
 
 
-![image-20200501194840499](media/Spring5.assets/image-20200501194840499.png)
+![image-20200501194840499](media/README.assets/image-20200501194840499.png)
 
-![image-20200501194902199](media/Spring5.assets/image-20200501194902199.png)
+![image-20200501194902199](media/README.assets/image-20200501194902199.png)
 
 >   结果可以发现，在调用show方法之前，User对象已经通过无参构造初始化了！
 
-![image-20200501195203756](media/Spring5.assets/image-20200501195203756.png)
+![image-20200501195203756](media/README.assets/image-20200501195203756.png)
 
-![image-20200501195140795](media/Spring5.assets/image-20200501195140795.png)
+![image-20200501195140795](media/README.assets/image-20200501195140795.png)
 
 ### 4.2. 通过有参构造方法来创建
 
@@ -275,7 +275,7 @@ public void testT(){
 }
 ```
 
-![image-20200501202212527](media/Spring5.assets/image-20200501202212527.png)
+![image-20200501202212527](media/README.assets/image-20200501202212527.png)
 
 结论：在配置文件加载的时候。其中管理的对象都已经初始化了！
 
@@ -552,7 +552,7 @@ c:
 
 在`Spring`中，那些组成应用程序的主体及由`Spring IoC`容器所管理的对象，被称之为`bean`。简单地讲，`bean`就是由`IoC`容器初始化、装配及管理的对象 .
 
-![image-20200502124138362](media/Spring5.assets/image-20200502124138362.png)
+![image-20200502124138362](media/README.assets/image-20200502124138362.png)
 
 >   `Spring`中的`bean`默认都是单例的
 
@@ -564,7 +564,7 @@ c:
         <bean id="user2" class="ink.bzm.pojo.User" c:name="Bzm" c:age="18" scope="singleton"></bean>
     ```
 
-    ![image-20200502125530376](media/Spring5.assets/image-20200502125530376.png)
+    ![image-20200502125530376](media/README.assets/image-20200502125530376.png)
 
 2.  `prototype`原型模式
     当一个`bean`的作用域为`Prototype`，表示一个`bean`定义对应多个对象实例。`Prototype`作用域的`bean`会导致在每次对该`bean`请求（将其注入到另一个`bean`中，或者以程序的方式调用容器的`getBean()`方法）时都会创建一个新的`bean`实例。`Prototype`是原型类型，它在我们创建容器的时候并没有实例化，而是当我们获取bean的时候才会去创建一个对象，而且我们每次获取到的对象都不是同一个对象。根据经验，对有状态的`bean`应该使用`prototype`作用域，而对无状态的`bean`则应该使用singleton作用域。在`XML`中将`bean`定义成`prototype`，可以这样配置：
@@ -573,7 +573,7 @@ c:
         <bean id="user2" class="ink.bzm.pojo.User" c:name="Bzm" c:age="18" scope="prototype"></bean>
     ```
 
-    ![image-20200502125544739](media/Spring5.assets/image-20200502125544739.png)
+    ![image-20200502125544739](media/README.assets/image-20200502125544739.png)
 
 >   　五种作用域中，request、session和global session三种作用域仅在基于web的应用中使用
 
@@ -910,7 +910,7 @@ public class User {
 
 `AOP`（`Aspect Oriented Programming`）意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。`AOP`是`OOP`的补充和完善，是软件开发中的一个热点，也是`Spring`框架中的一个重要内容，是函数式编程的一种衍生范型。利用`AOP`可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。
 
-![image-20200503110241522](media/Spring5.assets/image-20200503110241522.png)
+![image-20200503110241522](media/README.assets/image-20200503110241522.png)
 
 >   
 
@@ -1053,7 +1053,7 @@ aop:aspectj-autoproxy：说明
 
 事务一旦完成，无论系统发生什么错误，结果都不会受到影响。通常情况下，事务的结果被写到持久化存储器中
 
-![image-20200503130353427](media/Spring5.assets/image-20200503130353427.png)
+![image-20200503130353427](media/README.assets/image-20200503130353427.png)
 
 [Spring中的事务](https://juejin.im/post/5a5c631e6fb9a01cb508cd3d)
 

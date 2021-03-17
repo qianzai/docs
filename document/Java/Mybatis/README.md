@@ -10,7 +10,7 @@
 - `MyBatis `免除了几乎所有的 `JDBC `代码以及设置参数和获取结果集的工作。
 - `MyBatis `可以通过简单的 `XML `或注解来配置和映射原始类型、接口和 `Java POJO`（`Plain Old Java Objects`，普通老式 Java 对象）为数据库中的记录。
 
-![MyBatis logo](media/Mybatis.assets/mybatis-logo-1614593605493.png)
+![MyBatis logo](media/README.assets/mybatis-logo-1614593605493.png)
 
 ### 1.1. 持久化
 
@@ -1459,7 +1459,7 @@ public void testQueryUserById(){
 }
 ```
 
-![image-20200612155714983](media/Mybatis.assets/image-20200612155714983-1614593520834-1614593605503.png)
+![image-20200612155714983](media/README.assets/image-20200612155714983-1614593520834-1614593605503.png)
 
 ### 13.2. 二级缓存
 
@@ -1467,7 +1467,7 @@ public void testQueryUserById(){
 
 > 二级缓存 二级缓存的原理和一级缓存原理一样，第一次查询，会将数据放入缓存中，然后第二次查询则会直接去缓存中取。但是一级缓存是基于 `sqlSession `的，而 二级缓存是基于 `mapper`文件的`namespace`的。
 
-![img](media/Mybatis.assets/3167863-62a2bf5438197d58-1614593605504.webp)
+![img](media/README.assets/3167863-62a2bf5438197d58-1614593605504.webp)
 
 **使用步骤**
 
@@ -1529,3 +1529,4 @@ public void testQueryUserById2() {
     session2.close();
 }
 ```
+

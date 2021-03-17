@@ -8,29 +8,29 @@
 
 [Spring Cloud官网](https://spring.io/projects/spring-cloud)
 
-![img](media/SpringCloud笔记.assets/16d1a2a902f4b355)
+![img](media/README.assets/16d1a2a902f4b355)
 
 ### 1.1、版本选型
 
 [版本对应规则](https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies)
 
-![image-20200802212414093](media/SpringCloud笔记.assets/image-20200802212414093.png)
+![image-20200802212414093](media/README.assets/image-20200802212414093.png)
 
 >   使用[json处理工具](https://tool.lu/json/)查看，详细版本对象`json`信息。
 
 详细的版本对应关系，可以查看`Spring Cloud`官网
 
-![image-20200802213125920](media/SpringCloud笔记.assets/image-20200802213125920.png)
+![image-20200802213125920](media/README.assets/image-20200802213125920.png)
 
 **本次笔记使用版本：**
 
-![image-20200802213005385](media/SpringCloud笔记.assets/image-20200802213005385.png)
+![image-20200802213005385](media/README.assets/image-20200802213005385.png)
 
 ### 1.2、架构组件
 
 [Spring Cloud架构](Spring Cloud架构.xmind)
 
-![image-20200802220547679](media/SpringCloud笔记.assets/image-20200802220547679.png)
+![image-20200802220547679](media/README.assets/image-20200802220547679.png)
 
 ## 2、微服务cloud 基础项目工程搭建
 
@@ -40,11 +40,11 @@
 
 1、先创建一个父项目`cloud2020`
 
- ![image-20200802223626854](media/SpringCloud笔记.assets/image-20200802223626854.png)
+ ![image-20200802223626854](media/README.assets/image-20200802223626854.png)
 
 2、删除多余文件，只留`pom`，编写**父pom**，统一版本。
 
-![image-20200802223816006](media/SpringCloud笔记.assets/image-20200802223816006.png)
+![image-20200802223816006](media/README.assets/image-20200802223816006.png)
 
 ### 2.2、项目业务模块
 
@@ -303,7 +303,7 @@ public class PaymentController {
 
 访问：http://localhost:8001/payment/get/8
 
-![image-20200804213628250](media/SpringCloud笔记.assets/image-20200804213628250.png)
+![image-20200804213628250](media/README.assets/image-20200804213628250.png)
 
 #### 2.2.2、消费者模块
 
@@ -426,7 +426,7 @@ public class OrderController {
 
 http://localhost/consumer/payment/get/8
 
-![image-20200804215818020](media/SpringCloud笔记.assets/image-20200804215818020.png)
+![image-20200804215818020](media/README.assets/image-20200804215818020.png)
 
 >   消费端调用成功
 
@@ -458,7 +458,7 @@ http://localhost/consumer/payment/get/8
 
 `Eureka`架构
 
-![Eureka架构](media/SpringCloud笔记.assets/Eureka架构.png)
+![Eureka架构](media/README.assets/Eureka架构.png)
 
 `Eureka`采用了`CS`的设计架构,` Eureka Server`作为**服务注册功能的服务器**，它是**服务注册中心**。而系统中的其他微服务,使佣`Eureka`的客户端连接到`Eureka Server`并维持心跳连接。这样系统的维护人员就可以通过`Eureka Server`来监控系统中各个微服务是否正常运行。
 
@@ -559,7 +559,7 @@ public class EurekaMain7001 {
 
 ###### 4、启动测试
 
-![image-20201228145218814](media/SpringCloud笔记.assets/image-20201228145218814.png)
+![image-20201228145218814](media/README.assets/image-20201228145218814.png)
 
 
 
@@ -606,7 +606,7 @@ public class PaymentMain8001 {
 
 http://localhost:7001/
 
-![image-20200806230008136](media/SpringCloud笔记.assets/image-20200806230008136.png)
+![image-20200806230008136](media/README.assets/image-20200806230008136.png)
 
 #### 3.1.7、订单模块80注册
 
@@ -656,7 +656,7 @@ public class OrderMain80 {
 
 http://localhost:7001/
 
-![image-20200810221421464](media/SpringCloud笔记.assets/image-20200810221421464.png)
+![image-20200810221421464](media/README.assets/image-20200810221421464.png)
 
 
 
@@ -664,7 +664,7 @@ http://localhost:7001/
 
 >   互相注册，相互守望
 
-![6944619-6f03a2c9ad708f6e](media/SpringCloud笔记.assets/6944619-6f03a2c9ad708f6e.webp)
+![6944619-6f03a2c9ad708f6e](media/README.assets/6944619-6f03a2c9ad708f6e.webp)
 
 `Eureka Server `集群相互之间通过 `Replicate `来同步数据，相互之间**不区分主节点和从节点**，所有的节点都是平等的。在这种架构中，节点通过彼此互相注册来提高可用性，每个节点需要添加一个或多个有效的 `serviceUrl `指向其他节点。
 
@@ -770,11 +770,11 @@ eureka:
 
 http://eureka7001.com:7001/
 
-![image-20200811001634060](media/SpringCloud笔记.assets/image-20200811001634060.png)
+![image-20200811001634060](media/README.assets/image-20200811001634060.png)
 
 http://localhost/consumer/payment/get/8
 
-![image-20200811002401853](media/SpringCloud笔记.assets/image-20200811002401853.png)
+![image-20200811002401853](media/README.assets/image-20200811002401853.png)
 
 #### 3.1.11、支付模块集群配置
 
@@ -831,7 +831,7 @@ public class ApplicationContextConfig {
 
 http://localhost/consumer/payment/get/8
 
-![image-20200811095810060](media/SpringCloud笔记.assets/image-20200811095810060.png)
+![image-20200811095810060](media/README.assets/image-20200811095810060.png)
 
 #### 3.1.12、actuator微服务信息完善
 
@@ -922,7 +922,7 @@ eureka:
 
 http://localhost:7001/测试
 
-![image-20200811135322887](media/SpringCloud笔记.assets/image-20200811135322887.png)
+![image-20200811135322887](media/README.assets/image-20200811135322887.png)
 
 >   自保存模式被关闭。这可能不能保护实例在网络/其他问题的情况下过期。
 
@@ -1073,11 +1073,11 @@ public class PaymentController {
 
 启动`cloud-provider-payment8004`
 
-![image-20200813200222629](media/SpringCloud笔记.assets/image-20200813200222629.png)
+![image-20200813200222629](media/README.assets/image-20200813200222629.png)
 
 http://localhost:8004/payment/zk
 
-![image-20200813200240486](media/SpringCloud笔记.assets/image-20200813200240486.png)
+![image-20200813200240486](media/README.assets/image-20200813200240486.png)
 
 
 
@@ -1208,11 +1208,11 @@ public class OrderZKController {
 
 ###### 5、测试
 
-![image-20200813220952152](media/SpringCloud笔记.assets/image-20200813220952152.png)
+![image-20200813220952152](media/README.assets/image-20200813220952152.png)
 
 http://localhost/consumer/payment/zk
 
-![image-20200813221019037](media/SpringCloud笔记.assets/image-20200813221019037.png)
+![image-20200813221019037](media/README.assets/image-20200813221019037.png)
 
 ### 3.3、Consul详解
 
@@ -1466,7 +1466,7 @@ public class OrderConsulController {
 
 http://localhost/consumer/payment/consul
 
-![image-20200814210237557](media/SpringCloud笔记.assets/image-20200814210237557.png)
+![image-20200814210237557](media/README.assets/image-20200814210237557.png)
 
 ---
 
@@ -1482,7 +1482,7 @@ http://localhost/consumer/payment/consul
 -   可用性(`Availability`) (保证每个请求不管成功或者失败都有响应)
 -   分隔容忍(`Partition tolerance`) (系统中任意信息的丢失或失败不会影响系统的继续运作)
 
-![image-20200814212534484](media/SpringCloud笔记.assets/image-20200814212534484.png)
+![image-20200814212534484](media/README.assets/image-20200814212534484.png)
 
 
 
@@ -1616,7 +1616,7 @@ public interface IRule{
 
 （7）`ZoneAvoidanceRule`：复合判断`Server`所在区域的性能和Server的可用性选择服务器；
 
-![image-20200815212635600](media/SpringCloud笔记.assets/image-20200815212635600.png)
+![image-20200815212635600](media/README.assets/image-20200815212635600.png)
 
 #### 4.1.5、Ribbon负载规则替换
 
@@ -1624,7 +1624,7 @@ public interface IRule{
 
 这个自定义配置类不能放在`@ComponentScan`所扫描的当前包下以及子包下，否则我们自定义的这个配置类就会被所有的`Ribbon`客户端所共享，达不到特殊化定制的目的了。
 
-![image-20200815214624327](media/SpringCloud笔记.assets/image-20200815214624327.png)
+![image-20200815214624327](media/README.assets/image-20200815214624327.png)
 
 `MySelfRule`
 
@@ -1660,7 +1660,7 @@ public class OrderMain80 {
 
 **`rest`接口第几次请求数%服务器集群总数量=实际调用服务器位置下标，每次服务重启动后rest接口计数从 1开始。**
 
-![image-20200816104636152](media/SpringCloud笔记.assets/image-20200816104636152.png)
+![image-20200816104636152](media/README.assets/image-20200816104636152.png)
 
 #### 4.1.7、Ribbon负载规则手写
 
@@ -1757,7 +1757,7 @@ public class OrderController {
 }
 ```
 
-http://localhost/consumer/payment/lb进行测试 ![image-20200816214042078](media/SpringCloud笔记.assets/image-20200816214042078.png)
+http://localhost/consumer/payment/lb进行测试 ![image-20200816214042078](media/README.assets/image-20200816214042078.png)
 
 ### 4.2、OpenFeign详解
 
@@ -1923,7 +1923,7 @@ public class OrderFeignController {
 
 http://localhost/consumer/payment/get/8
 
-![image-20200817195616200](media/SpringCloud笔记.assets/image-20200817195616200.png)
+![image-20200817195616200](media/README.assets/image-20200817195616200.png)
 
 #### 4.2.3、OpenFeign超时控制
 
@@ -1988,11 +1988,11 @@ public class OrderFeignController {
 
 http://localhost:8001/payment/feign/timeout服务端三秒后显示
 
-![image-20200817204035197](media/SpringCloud笔记.assets/image-20200817204035197.png)
+![image-20200817204035197](media/README.assets/image-20200817204035197.png)
 
 http://localhost/consumer/payment/feign/timeout消费端报错，默认一秒。
 
-![image-20200817211438463](media/SpringCloud笔记.assets/image-20200817211438463.png)
+![image-20200817211438463](media/README.assets/image-20200817211438463.png)
 
 ###### 3、设置超时配置
 
@@ -2033,7 +2033,7 @@ logging:
 
 http://localhost/consumer/payment/get/8访问查看控制台日志信息。
 
-![image-20200818170414106](media/SpringCloud笔记.assets/image-20200818170414106.png)
+![image-20200818170414106](media/README.assets/image-20200818170414106.png)
 
 ## 5、服务降级
 
@@ -2081,7 +2081,7 @@ http://localhost/consumer/payment/get/8访问查看控制台日志信息。
 >
 >   **当检测到该节点微服务调用响应正常后，恢复调用链路。**
 >
->   ![img](media/SpringCloud笔记.assets/state.png)
+>   ![img](media/README.assets/state.png)
 
 -   熔断器是一种开关，用来控制流量是否执行业务逻辑
 -   熔断器核心指标
@@ -2577,7 +2577,7 @@ public class OrderHystrixControllr {
 
 http://localhost/consumer/payment/hystrix/timeout/8
 
-![image-20200822201614121](media/SpringCloud笔记.assets/image-20200822201614121.png)
+![image-20200822201614121](media/README.assets/image-20200822201614121.png)
 
 #### 5.1.6、Hystrix之通配服务降级FeignFallback
 
@@ -2627,7 +2627,7 @@ public class PaymentFallbackService implements PaymentHystrixService {
 
 http://localhost/consumer/payment/hystrix/ok/8
 
-![image-20200822205007708](media/SpringCloud笔记.assets/image-20200822205007708.png)
+![image-20200822205007708](media/README.assets/image-20200822205007708.png)
 
 
 
@@ -2694,15 +2694,15 @@ public class PaymentController {
 
 http://localhost:8001/payment/circuit/8
 
-![image-20200823134842356](media/SpringCloud笔记.assets/image-20200823134842356.png)
+![image-20200823134842356](media/README.assets/image-20200823134842356.png)
 
 http://localhost:8001/payment/circuit/-1
 
-![image-20200823134939967](media/SpringCloud笔记.assets/image-20200823134939967.png)
+![image-20200823134939967](media/README.assets/image-20200823134939967.png)
 
  http://localhost:8001/payment/circuit/1
 
-![image-20200823141037732](media/SpringCloud笔记.assets/image-20200823141037732.png)
+![image-20200823141037732](media/README.assets/image-20200823141037732.png)
 
 >   当错误到达`60%`时候，会断开链路，正确也不能成功访问，`sleepWindowInMilliseconds`时间过后才能访问。
 
@@ -2714,7 +2714,7 @@ http://localhost:8001/payment/circuit/-1
 
 工作流程图
 
-![preview](media/SpringCloud笔记.assets/3698765333-5a334916742e3_articlex.png)
+![preview](media/README.assets/3698765333-5a334916742e3_articlex.png)
 
 #### 5.1.9、Hystrix图形化Dashboard搭建
 
@@ -2849,7 +2849,7 @@ eureka:
 
 http://localhost:9527/payment/get/8
 
-![image-20200830104016888](media/SpringCloud笔记.assets/image-20200830104016888.png)
+![image-20200830104016888](media/README.assets/image-20200830104016888.png)
 
 >   不想暴露`8001`端口，在`8001`外面套一层`9527`
 
@@ -2893,7 +2893,7 @@ public class GatewayConfig {
 
 http://localhost:9527/guonei
 
-![image-20200830150442566](media/SpringCloud笔记.assets/image-20200830150442566.png)
+![image-20200830150442566](media/README.assets/image-20200830150442566.png)
 
 
 
@@ -2941,7 +2941,7 @@ eureka:
 
 http://localhost:9527/payment/lb
 
-![image-20200830152917443](media/SpringCloud笔记.assets/image-20200830152917443.png)
+![image-20200830152917443](media/README.assets/image-20200830152917443.png)
 
 >   `8001`与`8002`切换
 
@@ -2953,9 +2953,9 @@ http://localhost:9527/payment/lb
 
 >   `Loaded RoutePredicateFactory`加载路由断言工厂
 
-![image-20200830153225217](media/SpringCloud笔记.assets/image-20200830153225217.png)
+![image-20200830153225217](media/README.assets/image-20200830153225217.png)
 
-![img](media/SpringCloud笔记.assets/1677ca514d6ba46b)
+![img](media/README.assets/1677ca514d6ba46b)
 
 断言`predicates`配置
 
@@ -3058,11 +3058,11 @@ public class MyLogGatewayFilter implements GlobalFilter, Ordered {
 
 http://localhost:9527/payment/lb?uname=bzm
 
-![image-20200907095242069](media/SpringCloud笔记.assets/image-20200907095242069.png)
+![image-20200907095242069](media/README.assets/image-20200907095242069.png)
 
 http://localhost:9527/payment/lb
 
-![image-20200907095310814](media/SpringCloud笔记.assets/image-20200907095310814.png)
+![image-20200907095310814](media/README.assets/image-20200907095310814.png)
 
 ## 7、服务配置
 
@@ -3078,7 +3078,7 @@ http://localhost:9527/payment/lb
 -   配置发生变动时，服务不需要重启即可感知到配置的变化并应用新的配置。
 -   将配置信息以`REST`接口的形式暴露。
 
-![Config 流程](media/SpringCloud笔记.assets/Config 流程-1599817738066.png)
+![Config 流程](media/README.assets/Config 流程-1599817738066.png)
 
 #### 7.1.2、Config配置总控中心搭建
 
@@ -3086,9 +3086,9 @@ http://localhost:9527/payment/lb
 
 先在GitHub上创建一个仓库`springcloud-config`， 并拉取到本地。
 
-![image-20200914090035385](media/SpringCloud笔记.assets/image-20200914090035385.png)
+![image-20200914090035385](media/README.assets/image-20200914090035385.png)
 
-![image-20200914090515248](media/SpringCloud笔记.assets/image-20200914090515248.png)
+![image-20200914090515248](media/README.assets/image-20200914090515248.png)
 
 ##### 7.1.2.2、新建module，cloud-config-center-3344
 
@@ -3211,21 +3211,21 @@ config:
 
 然后运行项目，访问http://localhost:3344/master/config-dev.yml测试
 
-![image-20200914093803901](media/SpringCloud笔记.assets/image-20200914093803901.png)
+![image-20200914093803901](media/README.assets/image-20200914093803901.png)
 
 ##### 7.1.2.3、微服务从GitHub获取方式
 
 新建一个分支`dev`，并且创建对应的测试`yml`文件
 
-![image-20200914100055058](media/SpringCloud笔记.assets/image-20200914100055058.png)
+![image-20200914100055058](media/README.assets/image-20200914100055058.png)
 
 访问master分支的prod：http://localhost:3344/master/config-prod.yml
 
 访问dev分支的prod：http://localhost:3344/dev/config-prod.yml
 
-![image-20200914100345936](media/SpringCloud笔记.assets/image-20200914100345936.png)
+![image-20200914100345936](media/README.assets/image-20200914100345936.png)
 
-![image-20200914100356121](media/SpringCloud笔记.assets/image-20200914100356121.png)
+![image-20200914100356121](media/README.assets/image-20200914100356121.png)
 
 >   `/{label}-{name}-{profiles}.yml`
 >
@@ -3235,11 +3235,11 @@ config:
 >
 >   官网一共有五种访问的方式，可以自己去尝试。
 
-![image-20200914100812572](media/SpringCloud笔记.assets/image-20200914100812572.png)
+![image-20200914100812572](media/README.assets/image-20200914100812572.png)
 
 访问一个不存在的：http://localhost:3344/master/config-abcd.yml
 
-![image-20200914101030994](media/SpringCloud笔记.assets/image-20200914101030994.png)
+![image-20200914101030994](media/README.assets/image-20200914101030994.png)
 
 >   显示为{}
 
@@ -3356,7 +3356,7 @@ public class ConfigClientController {
 
 访问：http://localhost:3355/configInfo
 
-![image-20200914110705602](media/SpringCloud笔记.assets/image-20200914110705602.png)
+![image-20200914110705602](media/README.assets/image-20200914110705602.png)
 
 >   成功实现了客户端`3355`访问`SpringCloud Config3344`通过`GitHub`获取配置信息。
 
@@ -3403,7 +3403,7 @@ public class ConfigClientController {
 
 2.  成功访问后，修改GitHub的远程仓库测试配置文件。
 
-![image-20200914113521109](media/SpringCloud笔记.assets/image-20200914113521109.png)
+![image-20200914113521109](media/README.assets/image-20200914113521109.png)
 
 3.  向客户端3355发送post请求刷新3355。
 
@@ -3413,7 +3413,7 @@ public class ConfigClientController {
 
 4.  然后查看3355，能不能动态的刷新：http://localhost:3355/configInfo
 
-![image-20200914114319067](media/SpringCloud笔记.assets/image-20200914114319067.png)
+![image-20200914114319067](media/README.assets/image-20200914114319067.png)
 
 >   避免了服务重启。
 
@@ -3602,7 +3602,7 @@ management:
 
 修改GitHub的远程仓库测试配置文件
 
-![image-20200914145120344](media/SpringCloud笔记.assets/image-20200914145120344.png)
+![image-20200914145120344](media/README.assets/image-20200914145120344.png)
 
 向配置总控中心3344发送post请求刷新。
 
@@ -3633,11 +3633,11 @@ $ curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3355"
 
 http://localhost:3355/configInfo
 
-![image-20200914151046886](media/SpringCloud笔记.assets/image-20200914151046886.png)
+![image-20200914151046886](media/README.assets/image-20200914151046886.png)
 
 http://localhost:3366/configInfo
 
-![image-20200914151115249](media/SpringCloud笔记.assets/image-20200914151115249.png)
+![image-20200914151115249](media/README.assets/image-20200914151115249.png)
 
 >   3355刷了配置，3366没有刷新。
 
@@ -3665,7 +3665,7 @@ Source和Sink
 
 >   简单的可理解为参照对象是Spring Cloud Stream自身，从Stream发布消息就是输出，接受消息就是输入。
 
-![Stream结构图](media/SpringCloud笔记.assets/Stream结构图.png)
+![Stream结构图](media/README.assets/Stream结构图.png)
 
 
 
@@ -3829,15 +3829,15 @@ public class SendMessageController {
 
 登入`rabbitmq`，查看`Exchanges` 中studyExchange是否存在
 
-![image-20200915093355729](media/SpringCloud笔记.assets/image-20200915093355729.png)
+![image-20200915093355729](media/README.assets/image-20200915093355729.png)
 
 访问http://localhost:8801/sendMessage，查看后台。
 
- ![image-20200915093648844](media/SpringCloud笔记.assets/image-20200915093648844.png)
+ ![image-20200915093648844](media/README.assets/image-20200915093648844.png)
 
 查看最后消息发送率
 
-![image-20200915093803850](media/SpringCloud笔记.assets/image-20200915093803850.png)
+![image-20200915093803850](media/README.assets/image-20200915093803850.png)
 
 #### 9.1.4、消息驱动之消费者
 
@@ -3965,7 +3965,7 @@ public class ReceiverMessageListenerController {
 
 启动7001,7002,8801,8802，访问http://localhost:8801/sendMessage，8801发出消息，8802接收消息，控制台打出流水号。
 
-![image-20200915100832703](media/SpringCloud笔记.assets/image-20200915100832703.png)
+![image-20200915100832703](media/README.assets/image-20200915100832703.png)
 
 #### 9.1.5、分组消费与持久化
 
@@ -3975,7 +3975,7 @@ public class ReceiverMessageListenerController {
 
 然后运行，在Eureka查看。
 
-![image-20200915102506615](media/SpringCloud笔记.assets/image-20200915102506615.png)
+![image-20200915102506615](media/README.assets/image-20200915102506615.png)
 
 >   然后会发现两个问题：
 >
@@ -4096,15 +4096,15 @@ public String paymentZipkin() {
 
 然后在9411查看链路追踪效果。
 
-![image-20200915135906163](media/SpringCloud笔记.assets/image-20200915135906163.png)
+![image-20200915135906163](media/README.assets/image-20200915135906163.png)
 
 >   查找到的链路信息
 
-![image-20200915135920131](media/SpringCloud笔记.assets/image-20200915135920131.png)
+![image-20200915135920131](media/README.assets/image-20200915135920131.png)
 
 >   调用关系，服务数量，深度，耗时
 
-![image-20200915135944145](media/SpringCloud笔记.assets/image-20200915135944145.png)
+![image-20200915135944145](media/README.assets/image-20200915135944145.png)
 
 >   依赖图
 
