@@ -469,7 +469,9 @@ public class Author {
 
 ### 5.1. Mybatis 工作流程
 
-![未命名文件.png](https://i.loli.net/2020/06/10/cD8KlItRY9qQj3x.png)
+![Mybatis工作流程](media/README.assets/Mybatis工作流程.png)
+
+
 
 #### 5.1.1. SqlSessionFactoryBuilder
 
