@@ -4,6 +4,7 @@
   - [Mybatis](/document/Java/Mybatis/)
   - [Spring5](/document/Java/Spring5/)
   - [SpringMVC](/document/Java/SpringMVC)
+  - [JWT](/document/Java/JWT)
   - [SpringBoot](/document/Java/SpringBoot/)
   - [SpringCloud](/document/Java/SpringCloud/)
 - [🧵 中间件](/document/中间件/)
