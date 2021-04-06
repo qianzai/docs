@@ -42,6 +42,7 @@
   - [Gitmoji](/document/GitHub/Gitmoji.md)
   - [vue-element-admin](/document/GitHub/vue-element-admin)
 - [⚒️ 实用技巧](/document/实用技巧/)
+  - [谷歌搜索](/document/实用技巧/谷歌搜索)
   - [Git命令](/document/实用技巧/Git命令)
   - [Gitee 自动同步 GitHub 仓库](/document/实用技巧/Gitee自动同步GitHub仓库.md)
   - [使用 WebHooks 进行自动化部署](/document/实用技巧/使用WebHooks进行自动化部署)
@@ -49,6 +50,7 @@
   - [定时备份](/document/实用技巧/定时备份)
   - [IDEA 使用](/document/实用技巧/IDEA使用)
 - [🔨 工具集](/document/工具集/)
+  - [Arch折腾记录](/document/工具集/Arch折腾记录)
   - [文档工具](/document/工具集/文档工具)
   - [Visual Studio Code](/document/工具集/VisualStudioCode)
-  <!-- - [Test](/document/test/) -->
+    <!-- - [Test](/document/test/) -->
