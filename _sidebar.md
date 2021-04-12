@@ -15,7 +15,7 @@
   - [数据库](/document/中间件/数据库/)
     - [Mysql](/document/中间件/数据库/Mysql)
 - [☸️ 云原生](/document/云原生/)
-  - [Docker容器镜像大小](/document/云原生/Docker容器镜像大小)
+  - [Docker镜像详解](/document/云原生/Docker镜像详解)
   - [Kubernetes](/document/云原生/Kubernetes/)
 - [🐧 运维](/document/运维/)
   - [逻辑卷](/document/运维/逻辑卷)
