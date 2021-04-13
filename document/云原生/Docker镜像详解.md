@@ -4,11 +4,11 @@
 
 !>在构建 Docker 容器时，应该尽量想办法获得体积更小的镜像。这是无论是去传输还是部署时，速度会更快！
 
+**下面是差不多包含了Docker所有命令的一张图**
 
+> 从中可以看出，Docker 包含三个基本概念，分别是镜像（Image）、容器（Container）和仓库（Repository）。
 
 ![image](media/Docker镜像详解.assets/71366177-3d516a00-25dc-11ea-8eab-2e366dc0e900.png)
-
->从中可以看出，Docker 包含三个基本概念，分别是镜像（Image）、容器（Container）和仓库（Repository）。
 
 ## 2. 概念
 
@@ -62,7 +62,7 @@
 
 ## 3. Docker镜像制作
 
-制作Docker镜像有两种方式，一种是使用`docker commit`命令制作，一种是使用`Dockerfile`文件构建。这里就不具体介绍了。
+?>制作Docker镜像有两种方式，一种是使用`docker commit`命令制作，一种是使用`Dockerfile`文件构建。这里就不具体介绍了。
 
 **对应Docker镜像，都要保证镜像尽可能小**，可以从如下方面去优化。
 

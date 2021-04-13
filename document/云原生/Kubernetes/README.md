@@ -4665,6 +4665,10 @@ kube-apiserver --disable-admission-plugins=PodNodeSelector,AlwaysDeny ...
 kube-apiserver -h | grep enable-admission-plugins
 ```
 
+## Kubernetes高可用集群
+
+
+
 ## 11. 其他
 
 ### 11.1. 学习文章链接
