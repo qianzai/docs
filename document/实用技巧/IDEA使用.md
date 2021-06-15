@@ -239,6 +239,8 @@
 
 ##### [Rainbow Brackets（彩虹括号）](https://www.cnblogs.com/cchao1024/p/11971030.html)
 
+##### [RestfulToolkit（接口自测工具）](https://blog.csdn.net/qq_22741461/article/details/81625079)
+
 ##### [十分钟搞懂Lombok使用与原理](https://juejin.im/post/5a6eceb8f265da3e467555fe)
 
 ##### [maven helper](https://segmentfault.com/a/1190000017542396)
@@ -258,8 +260,6 @@
 ##### [Maven创建Java Web项目](https://blog.csdn.net/MyArrow/article/details/50824793)
 
 ##### [Idea设置Vue.js自动提示](https://blog.csdn.net/li1325169021/article/details/99710057)
-
-##### [RestfulToolkit（接口自测工具）](https://blog.csdn.net/qq_22741461/article/details/81625079)
 
 ##### [数据库问题DataBase](https://blog.csdn.net/weixin_43889841/article/details/97247333)
 

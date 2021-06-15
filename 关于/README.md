@@ -6,7 +6,7 @@
 - 公众号：[云计算小千](https://cdn.jsdelivr.net/gh/qianzai/qianzai@main/my_assets/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7.jpg)
 - **GitHub**：https://github.com/qianzai
 - 微信：[Qian_zai521](https://cdn.jsdelivr.net/gh/qianzai/qianzai@main/my_assets/%E5%BE%AE%E4%BF%A1.jpg)
-- 邮箱：buzhengmiao@163.com
+- 邮箱：[mail@bzm.ink](mail@bzm.ink)
 
 ---
 
